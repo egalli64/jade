@@ -1,7 +1,8 @@
 package com.example.jade.s05;
 
 public class WrongSingletonLazy {
-    private static WrongSingletonLazy instance = null;
+    // !!! being volatile here is not enough !!!
+    private static volatile WrongSingletonLazy instance = null;
 
     private int life;
 
