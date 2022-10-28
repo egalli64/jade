@@ -1,4 +1,4 @@
-package com.example.jade.s12;
+package com.example.jade.s12.qarmoq;
 
 public class MysticWarrior implements Fighter, Healer {
     private static final int HEALING_POWER = 2;

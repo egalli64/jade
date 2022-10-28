@@ -1,4 +1,4 @@
-package com.example.jade.s12;
+package com.example.jade.s12.qarmoq;
 
 public class Warrior extends Actor implements Fighter {
     public Warrior(String name) {

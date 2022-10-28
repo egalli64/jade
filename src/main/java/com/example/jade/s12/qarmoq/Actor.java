@@ -1,4 +1,4 @@
-package com.example.jade.s12;
+package com.example.jade.s12.qarmoq;
 
 import java.util.Random;
 import java.util.logging.Logger;
