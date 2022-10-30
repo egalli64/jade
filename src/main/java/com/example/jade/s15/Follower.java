@@ -1,10 +1,10 @@
 package com.example.jade.s15;
 
-public class Follower implements Subscriber {
+public class Follower implements Observer {
     private String name;
-    private Publisher publisher;
+    private Observee publisher;
 
-    public Follower(String name, Publisher publisher) {
+    public Follower(String name, Observee publisher) {
         this.name = name;
         this.publisher = publisher;
     }

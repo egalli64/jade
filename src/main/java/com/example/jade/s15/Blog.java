@@ -3,8 +3,8 @@ package com.example.jade.s15;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Blog implements Publisher {
-    private Set<Subscriber> observers;
+public class Blog implements Observee {
+    private Set<Observer> observers;
     private String name;
     private String currentPostTitle;
 
@@ -15,19 +15,19 @@ public class Blog implements Publisher {
     }
 
     @Override
-    public void register(Subscriber observer) {
+    public void register(Observer observer) {
         observers.add(observer);
     }
 
     @Override
-    public void remove(Subscriber observer) {
+    public void remove(Observer observer) {
         observers.remove(observer);
     }
 
     public void addPost(String title) {
         this.currentPostTitle = title;
 
-        for (Subscriber observer : observers) {
+        for (Observer observer : observers) {
             observer.update(name, currentPostTitle);
         }
     }
