@@ -1,14 +1,27 @@
+/*
+ * Introduction to Java Design Principles and Patterns
+ * 
+ * https://github.com/egalli64/jade
+ */
 package com.example.jade.s05;
 
+/**
+ * Demo for singleton eager
+ * <p>
+ * Two local variables get access to the singleton and work on it
+ */
 public class SingletonEagerMain {
-	public static void main(String[] args) {
-		SingletonEager eager = SingletonEager.getInstance();
-		System.out.println("Eager life is " + eager.getLife());
-		System.out.println("Life after fight is " + eager.fight(1));
+    public static void main(String[] args) {
+        SingletonEager eager = SingletonEager.getInstance();
+        SingletonEager e2 = SingletonEager.getInstance();
 
-		SingletonEager e2 = SingletonEager.getInstance();
-		System.out.println("E2 life is " + e2.getLife());
-		System.out.println("Life after fight is " + e2.fight(1));
-		System.out.println("Eager life after e2 fight is " + eager.getLife());
-	}
+        if (eager.isAlive()) {
+            eager.kill();
+            System.out.println("Eager was alive");
+        }
+
+        if (!e2.isAlive()) {
+            System.out.println("As expected, e2 is not alive");
+        }
+    }
 }
