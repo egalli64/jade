@@ -1,6 +1,16 @@
+/*
+ * Introduction to Java Design Principles and Patterns
+ * 
+ * https://github.com/egalli64/jade
+ */
 package com.example.jade.s02.dip;
 
-public class CalculatorAdd implements Calculator {
+/**
+ * Provide the add functionality by override
+ * <p>
+ * NOT using Dependency Inversion Principle
+ */
+public class CalculatorAdd extends Calculator {
     @Override
     public double calculate(double left, double right) {
         return left + right;
