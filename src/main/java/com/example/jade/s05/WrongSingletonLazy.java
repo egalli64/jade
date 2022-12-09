@@ -1,13 +1,18 @@
+/*
+ * Introduction to Java Design Principles and Patterns
+ * 
+ * https://github.com/egalli64/jade
+ */
 package com.example.jade.s05;
 
-public class WrongSingletonLazy {
+/**
+ * WRONG Singleton Design Pattern - Lazy
+ */
+public class WrongSingletonLazy extends BaseSingleton {
     // !!! being volatile here is not enough !!!
     private static volatile WrongSingletonLazy instance = null;
 
-    private int life;
-
     private WrongSingletonLazy() {
-        this.life = 42;
     }
 
     /**
@@ -21,10 +26,5 @@ public class WrongSingletonLazy {
             instance = new WrongSingletonLazy();
         }
         return instance;
-    }
-
-    public int fight(int points) {
-        life -= points;
-        return life;
     }
 }

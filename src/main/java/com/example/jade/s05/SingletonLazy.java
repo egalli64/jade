@@ -1,23 +1,30 @@
+/*
+ * Introduction to Java Design Principles and Patterns
+ * 
+ * https://github.com/egalli64/jade
+ */
 package com.example.jade.s05;
 
-public class SingletonLazy {
+/**
+ * Singleton Design Pattern - Lazy implementation by synchronization
+ */
+public class SingletonLazy extends BaseSingleton {
+    /** The singleton, notice it can't be final */
     private static SingletonLazy instance = null;
 
-    private int life;
-
+    /** Private! */
     private SingletonLazy() {
-        this.life = 42;
     }
 
+    /**
+     * Unique (expensive) access to the singleton
+     * 
+     * @return The singleton
+     */
     public static synchronized SingletonLazy getInstance() {
         if (instance == null) {
             instance = new SingletonLazy();
         }
         return instance;
-    }
-
-    public int fight(int points) {
-        life -= points;
-        return life;
     }
 }

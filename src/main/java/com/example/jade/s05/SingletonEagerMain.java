@@ -12,16 +12,16 @@ package com.example.jade.s05;
  */
 public class SingletonEagerMain {
     public static void main(String[] args) {
-        SingletonEager eager = SingletonEager.getInstance();
-        SingletonEager e2 = SingletonEager.getInstance();
+        SingletonEager sEager = SingletonEager.getInstance();
+        SingletonEager sEager2 = SingletonEager.getInstance();
 
-        if (eager.isAlive()) {
-            eager.kill();
-            System.out.println("Eager was alive");
+        if (sEager.isAlive()) {
+            sEager.kill();
+            System.out.println("Was alive");
         }
 
-        if (!e2.isAlive()) {
-            System.out.println("As expected, e2 is not alive");
+        if (!sEager2.isAlive()) {
+            System.out.println("Not alive anymore");
         }
     }
 }

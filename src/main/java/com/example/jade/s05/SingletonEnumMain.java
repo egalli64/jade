@@ -1,13 +1,27 @@
+/*
+ * Introduction to Java Design Principles and Patterns
+ * 
+ * https://github.com/egalli64/jade
+ */
 package com.example.jade.s05;
 
+/**
+ * Demo for singleton eager by Enum
+ * <p>
+ * Two local variables get access to the singleton and work on it
+ */
 public class SingletonEnumMain {
     public static void main(String[] args) {
-        System.out.println("INSTANCE life is " + SingletonEnum.INSTANCE.getLife());
-        System.out.println("Life after fight is " + SingletonEnum.INSTANCE.fight(1));
+        SingletonEnum sEagerEnum = SingletonEnum.INSTANCE;
+        SingletonEnum sEagerEnum2 = SingletonEnum.INSTANCE;
 
-        SingletonEnum se = SingletonEnum.INSTANCE;
-        System.out.println("Se life is " + se.getLife());
-        System.out.println("Life after fight is " + se.fight(1));
-        System.out.println("INSTANCE life after se fight is " + SingletonEnum.INSTANCE.getLife());
+        if (sEagerEnum.isAlive()) {
+            sEagerEnum.kill();
+            System.out.println("Was alive");
+        }
+
+        if (!sEagerEnum2.isAlive()) {
+            System.out.println("Not alive");
+        }
     }
 }

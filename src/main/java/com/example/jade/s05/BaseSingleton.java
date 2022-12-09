@@ -8,17 +8,14 @@ package com.example.jade.s05;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * Singleton Design Pattern - Eager implementation by enumerator
+ * Just to keep DRY the examples. Data and methods for the singleton.
  */
-public enum SingletonEnum {
-    /** The singleton */
-    INSTANCE;
-
+public abstract class BaseSingleton {
     /** Singleton instance data member */
-    private final AtomicInteger life;
+    private AtomicInteger life;
 
-    /** Private! */
-    private SingletonEnum() {
+    /** Notice that the ctor is private */
+    protected BaseSingleton() {
         this.life = new AtomicInteger(42);
     }
 
