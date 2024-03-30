@@ -9,11 +9,13 @@ package com.example.jade.s14.dog;
  * Dog strategy for barking
  */
 public interface Strategy {
+    /** The default barking strategy for a common dog */
     public static final Strategy DEFAULT = () -> System.out.println("Woof");
+    /** The no-barking strategy */
     public static final Strategy OFF = () -> System.out.println("<silence>");
 
     /**
-     * How the dog barks
+     * The barking algorithm
      */
     void bark();
 }
