@@ -1,4 +1,9 @@
-package com.example.jade.s12.qarmoq;
+/*
+ * Introduction to Java Design Principles and Patterns
+ * 
+ * https://github.com/egalli64/jade
+ */
+package com.example.jade.s13.qarmoq;
 
 import java.util.Random;
 import java.util.logging.Logger;

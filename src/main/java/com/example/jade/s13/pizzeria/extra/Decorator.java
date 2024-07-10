@@ -1,6 +1,11 @@
-package com.example.jade.s12.pizzeria.extra;
+/*
+ * Introduction to Java Design Principles and Patterns
+ * 
+ * https://github.com/egalli64/jade
+ */
+package com.example.jade.s13.pizzeria.extra;
 
-import com.example.jade.s12.pizzeria.base.Pizza;
+import com.example.jade.s13.pizzeria.base.Pizza;
 
 /**
  * Decorator

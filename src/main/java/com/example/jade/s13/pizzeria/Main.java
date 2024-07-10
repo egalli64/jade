@@ -1,9 +1,14 @@
-package com.example.jade.s12.pizzeria;
+/*
+ * Introduction to Java Design Principles and Patterns
+ * 
+ * https://github.com/egalli64/jade
+ */
+package com.example.jade.s13.pizzeria;
 
-import com.example.jade.s12.pizzeria.base.Margherita;
-import com.example.jade.s12.pizzeria.base.Pizza;
-import com.example.jade.s12.pizzeria.extra.Rucola;
-import com.example.jade.s12.pizzeria.extra.Shrimp;
+import com.example.jade.s13.pizzeria.base.Margherita;
+import com.example.jade.s13.pizzeria.base.Pizza;
+import com.example.jade.s13.pizzeria.extra.Rucola;
+import com.example.jade.s13.pizzeria.extra.Shrimp;
 
 public class Main {
     public static void main(String[] args) {
