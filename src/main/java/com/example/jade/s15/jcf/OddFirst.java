@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jade
  */
-package com.example.jade.s14.jcf;
+package com.example.jade.s15.jcf;
 
 import java.util.Comparator;
 

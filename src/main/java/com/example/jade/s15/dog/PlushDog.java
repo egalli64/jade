@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jade
  */
-package com.example.jade.s14.dog;
+package com.example.jade.s15.dog;
 
 /**
  * These dogs have a specific initial barking strategy
