@@ -1,4 +1,9 @@
-package com.example.jade.s10;
+/*
+ * Introduction to Java Design Principles and Patterns
+ * 
+ * https://github.com/egalli64/jade
+ */
+package com.example.jade.s11;
 
 import java.util.ArrayList;
 import java.util.List;
